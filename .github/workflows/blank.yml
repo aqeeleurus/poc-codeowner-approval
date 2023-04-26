@@ -2,6 +2,9 @@ name: main
 on:
   workflow_dispatch:
 
+permissions: read-all
+
+
 jobs:
   build:
     name: build
