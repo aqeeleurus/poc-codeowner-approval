@@ -34,3 +34,14 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - name: Check codeowners
+        id: codeowners
+        uses: codertocat/codeowners-action@v1
+        with:
+          path: ${{ github.event.pull_request.head.sha }}
+      - name: Request review from codeowners
+        if: steps.codeowners.outputs.approval_required == 'true'
+        uses: peter-evans/request-changes@v1
+        with:
+          reviewers: ${{ steps.codeowners.outputs.codeowners }}
+          changes-requested-label: 'Changes requested'
