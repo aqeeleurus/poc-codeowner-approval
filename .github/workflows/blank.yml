@@ -17,13 +17,15 @@ jobs:
     name: update-approvers
     runs-on: ubuntu-latest
     needs: build
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
     steps:
       - name: Deploy to production
         run: |
             curl -L \
             -X PUT \
             -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer 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" \
+            -H "Authorization: Bearer GITHUB_TOKEN" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             https://api.github.com/repos/aqeeleurus/poc-codeowner-approval/environments/dev \
             -d '{"wait_timer":30}'
