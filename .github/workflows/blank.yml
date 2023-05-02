@@ -2,8 +2,8 @@ name: main
 on:
   workflow_dispatch:
 
-permissions:
-  issues: write
+permissions: write-all
+  #issues: write
 
 
 jobs:
