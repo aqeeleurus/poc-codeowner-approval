@@ -19,7 +19,7 @@ jobs:
     needs: build
     permissions: write-all
     env:
-      GITHUB_TOKEN: ${{ github.token }}
+      GITHUB_TOKEN: ${{ secrets.CUSTOM_PAT }}
     steps:
       - name: Deploy to production
         run: |
