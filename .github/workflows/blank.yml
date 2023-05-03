@@ -41,4 +41,4 @@ jobs:
             -H "Authorization: Bearer $GITHUB_TOKEN" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             https://api.github.com/repos/aqeeleurus/poc-codeowner-approval/environments/dev \
-            -d $JSON_STRING
+            -d '{"reviewers":[{"type":"User","id":123},{"type":"User","id":456},{"type":"User","id":789},{"type":"User","id":121}]}'
