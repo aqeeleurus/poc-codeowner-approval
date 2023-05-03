@@ -34,6 +34,7 @@ jobs:
         
       - name: Deploy to production
         run: |
+            echo $JSON_STRING
             curl -L \
             -X PUT \
             -H "Accept: application/vnd.github+json" \
