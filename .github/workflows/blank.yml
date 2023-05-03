@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - run: |
+          ls -la
+          
   update-approvers:
     name: update-approvers
     runs-on: ubuntu-latest
