@@ -19,7 +19,7 @@ jobs:
         run: |
           ls -la
           array=($(jq  '.envs | to_entries[] | .value[].userId' test.txt))
-          JSON_STRING='{"reviewers":['
+          JSON_STRING='{"wait_timer":30,"reviewers":['
           for userId in ${array[@]}; do 
             JSON_STRING=$JSON_STRING'{"type":"User","id":'"$userId"'},'
           done
