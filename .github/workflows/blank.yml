@@ -11,8 +11,7 @@ jobs:
     name: build
     runs-on: ubuntu-latest
     steps:
-      - name: Build
-        run: echo building
+      - uses: actions/checkout@v3
   update-approvers:
     name: update-approvers
     runs-on: ubuntu-latest
