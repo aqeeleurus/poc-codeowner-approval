@@ -6,15 +6,7 @@ permissions: write-all
   #issues: write
 
 
-jobs:
-  build:
-    name: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - run: |
-          ls -la
-          
+jobs:     
   update-approvers:
     name: update-approvers
     runs-on: ubuntu-latest
@@ -23,6 +15,7 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.CUSTOM_PAT }}
     steps:
+      - uses: actions/checkout@v3
       - name: Get UserIDs
         run: |
           ls -la
