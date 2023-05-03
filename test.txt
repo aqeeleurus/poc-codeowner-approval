@@ -1,0 +1,13 @@
+{
+  "service": "bm",
+  "envs": {
+    "int01": [
+      {"userId": 123},
+      {"userId": 456}
+    ],
+    "int07": [
+      {"userId": 789},
+      {"userId": 121}
+    ]
+  }
+}
