@@ -30,7 +30,7 @@ jobs:
           # Remove the last comma from the string
           JSON_STRING=${JSON_STRING:0:last_comma}${JSON_STRING:last_comma+1}
           JSON_STRING="'"$JSON_STRING"'"
-          echo $JSON_STRING
+          echo "JSON_STRING=$JSON_STRING" >> $GITHUB_ENV
         
       - name: Deploy to production
         run: |
