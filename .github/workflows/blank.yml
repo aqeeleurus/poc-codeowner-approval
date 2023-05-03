@@ -23,6 +23,7 @@ jobs:
     steps:
       - name: Get UserIDs
         run: |
+          ls -la
           array=($(jq  '.envs | to_entries[] | .value[].userId' test.txt))
           JSON_STRING='{"reviewers":['
           for userId in ${array[@]}; do 
