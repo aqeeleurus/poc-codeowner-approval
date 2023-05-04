@@ -2,12 +2,12 @@
   "service": "bm",
   "envs": {
     "int01": [
-      {"userId": 123},
-      {"userId": 456}
+      {"userId": 103575370},
+      {"userId": 104192060}
     ],
     "int07": [
-      {"userId": 789},
-      {"userId": 121}
+      {"userId": 104192060},
+      {"userId": 103575370}
     ]
   }
 }
