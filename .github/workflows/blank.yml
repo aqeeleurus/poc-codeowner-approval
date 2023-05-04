@@ -42,7 +42,7 @@ jobs:
             echo 'ENVIRONMENT_NAMES'
             echo $ENVIRONMENT_NAMES
             echo '###########'
-            JSON=$(echo JSON_STRING)
+            JSON=$(echo $JSON_STRING)
             for env in ${ENVIRONMENT_NAMES[@]}; do 
               echo $env
               echo "$JSON_STRING"
