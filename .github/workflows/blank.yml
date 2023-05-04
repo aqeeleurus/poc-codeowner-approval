@@ -33,6 +33,7 @@ jobs:
         
       - name: Update environment settings
         run: |
+            echo $JSON_STRING
             ENVIRONMENT_NAMES=$(curl -L \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer $GITHUB_TOKEN" \
