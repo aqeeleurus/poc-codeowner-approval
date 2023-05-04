@@ -28,8 +28,12 @@ jobs:
           last_comma=$(echo "$JSON_STRING" | grep -aob ',' | tail -1 | cut -d':' -f1)
           # Remove the last comma from the string
           JSON_STRING=${JSON_STRING:0:last_comma}${JSON_STRING:last_comma+1}
+          echo "before single quotes"
+          echo $JSON_STRING
           JSON_STRING="'"$JSON_STRING"'"
           echo "JSON_STRING=$JSON_STRING" >> $GITHUB_ENV
+          echo "after double quotes"
+          echo $JSON_STRING
         
       - name: Update environment settings
         run: |
