@@ -40,6 +40,7 @@ jobs:
             https://api.github.com/repos/aqeeleurus/poc-codeowner-approval/environments | jq -r '.environments[].name')
             echo 'ENVIRONMENT_NAMES'
             echo $ENVIRONMENT_NAMES
+            echo '###########'
             for env in ${ENVIRONMENT_NAMES[@]}; do 
               echo $env
               curl -L \
