@@ -1,13 +1,16 @@
-{
-  "service": "bm",
-  "envs": {
-    "int01": [
-      {"userId": 103575370},
-      {"userId": 104192060}
-    ],
-    "int07": [
-      {"userId": 104192060},
-      {"userId": 103575370}
-    ]
-  }
-}
+[
+    {
+        "name": "integration",
+        "reviewers": [
+            {
+                "type": "User",
+                "id": 106390056
+            },
+            {
+                "type": "User",
+                "id": 106390092
+            }
+        ],
+        "deployment_branch_policy": null
+    }
+]
