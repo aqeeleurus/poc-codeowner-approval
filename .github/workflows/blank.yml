@@ -18,7 +18,7 @@ jobs:
       - name: Get UserIDs
         run: |
           ls -la
-          array=($(jq '.[].reviewers[].id' envsRules.json))
+          array=($(jq '.[].reviewers[].id' .github/workflows/envsRules.json))
           JSON_STRING='{"reviewers":['
           for userId in ${array[@]}; do 
             JSON_STRING=$JSON_STRING'{"type":"User","id":'"$userId"'},'
@@ -39,7 +39,7 @@ jobs:
             while IFS= read -r line; do
               # append the line to the array
               REPOS+=("$line")
-            done < includedRepos.txt
+            done < .github/workflows/includedRepos.txt
 
             # print the contents of the array
             for repo in ${REPOS[@]}; do
