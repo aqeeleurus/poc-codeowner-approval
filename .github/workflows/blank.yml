@@ -30,7 +30,7 @@ jobs:
           JSON_STRING=${JSON_STRING:0:last_comma}${JSON_STRING:last_comma+1}
           # JSON_STRING="'"$JSON_STRING"'"
           echo "JSON_STRING=$JSON_STRING" >> $GITHUB_ENV
-        
+      - uses: actions/checkout@v3
       - name: Update environment settings
         run: |
             echo $JSON_STRING
