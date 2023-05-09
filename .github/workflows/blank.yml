@@ -42,7 +42,9 @@ jobs:
             done < includedRepos.txt
 
             # print the contents of the array
-            echo "${REPOS[@]}"
+            for repo in ${REPOS[@]}; do
+              echo $repo
+            done
             for repo in ${REPOS[@]}; do 
               ENVIRONMENT_NAMES=$(curl -L \
               -H "Accept: application/vnd.github+json" \
